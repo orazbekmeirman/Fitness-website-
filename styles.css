@@ -1,0 +1,313 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Using modern Google font */
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+header ul li a:hover {
+    color: #ff6347;
+}
+
+.hero {
+    background: url('fitness-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #110f0f;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin: 20px 0;
+}
+
+.hero button {
+    padding: 15px 30px;
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.hero button:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about p, .program-item p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.program-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.program-item {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+
+.program-item:hover {
+    transform: translateY(-10px);
+}
+
+.program-item h3 {
+    color: #ff6347;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-container img {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.activities {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f9; /* Ensure this is the desired background */
+}
+
+.activities h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Activities Container: Full width divided into 3 columns */
+.activities-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Optional spacing between columns */
+}
+
+/* Ensuring the hover effect applies to items, not the container */
+.activity-item:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Each activity item takes 1/3 of the width */
+.activity-item {
+    flex: 1;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff; /* This should match the parent */
+    margin: 0; /* Ensure no margin that pushes items */
+    opacity: 1;
+}
+
+/* Additional styling to ensure full-width appearance */
+.activities-container {
+    width: 100%; /* Ensure the container is full width */
+}
+
+/* Set a min-height if necessary for visual consistency */
+.activity-item {
+    min-height: 200px; /* Ensures items have consistent height */
+}
+
+.activity-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ff6347;
+}
+
+.activity-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-item ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .activities-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .activity-item {
+        width: 100%; /* Full width for small screens */
+    }
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    width: 80%;
+    max-width: 600px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact button {
+    padding: 12px 25px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.contact button:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .program-item, .gallery-container img {
+        width: 100%;
+    }
+
+    header ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* For smaller mobile devices (max-width 480px) */
+@media (max-width: 480px) {
+    header ul {
+        flex-direction: column; /* Make the menu vertical */
+        align-items: center;
+    }
+    .hero h2 {
+        font-size: 2rem; /* Smaller heading on very small screens */
+    }
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+

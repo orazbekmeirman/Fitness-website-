@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website</title>
+
+    <!-- EmailJS initialization -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("K1a7dXIveHeNJrabL");
+        })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="fitness-gym.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <h1>Fitness Website</h1>
+            <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#program">Programs</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Transform Your Life with FitLife</h2>
+                <p>Get fit, stay healthy, and feel great with our custom workout plans and fitness programs.</p>
+                <button onclick="joinNow()">Join Now</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>FitLife is dedicated to helping people achieve their fitness goals with personalized workout plans and nutrition advice. Our professional trainers are here to guide you every step of the way. Our moto is <strong>1 hour of traning and 3 liters of water per day</strong></p>
+        </section>
+
+        <!-- Fitness Program Section -->
+        <section id="program" class="program">
+            <h2>Our Programs</h2>
+            <div class="program-container">
+                <div class="program-item">
+                    <h3>Weight Loss</h3>
+                    <p>Get fit and shed those extra pounds with our structured weight loss programs.</p>
+                </div>
+                <div class="program-item">
+                    <h3>Strength Training</h3>
+                    <p>Build muscle and improve strength with our customized workout plans.</p>
+                </div>
+                <div class="program-item">
+                    <h3>Flexibility</h3>
+                    <p>Improve flexibility and mental well-being through guided yoga sessions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <img src="photo-1627820751275-e44b937c5d33.avif" alt="Fitness Image 1">
+                <img src="photo-1554284126-aa88f22d8b74.avif" alt="Fitness Image 2">
+                <img src="photo-1599901860904-17e6ed7083a0.avif" alt="Fitness Image 3">
+            </div>
+        </section>
+
+        <section id="activities" class="activities">
+            <h2>Our Activities</h2>
+            <div class="activities-container">
+                <!-- Outdoor Activities -->
+                <div class="activity-item">
+                    <h3>Outdoor Activities</h3>
+                    <ul>
+                        <li>Jogging/Running with groups outside</li>
+                        <li>Outdoor Yoga Sessions</li>
+                        <li>Group Hiking</li>
+                    </ul>
+                </div>
+                <!-- Personal Training -->
+                <div class="activity-item">
+                    <h3>Personal Training</h3>
+                    <ul>
+                        <li>One-on-One Boxing</li>
+                        <li>Personalized Strength Training</li>
+                        <li>Cardio Sessions</li>
+                    </ul>
+                </div>
+                <!-- Group Sessions -->
+                <div class="activity-item">
+                    <h3>Group Sessions</h3>
+                    <ul>
+                        <li>Group Boxing Classes</li>
+                        <li>Yoga Classes</li>
+                        <li>Aerobics and Dance Workouts</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="on" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="on">
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required autocomplete="on"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FitLife. All rights reserved.</p>
+    </footer>
+
+    <!-- Link the external JS file -->
+    <script type="module" src="script.js" defer></script>
+</body>
+</html>
